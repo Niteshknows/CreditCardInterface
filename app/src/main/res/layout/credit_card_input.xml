@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent">
+
+       <com.google.android.material.textfield.TextInputLayout
+           style="@style/CreditCardLayoutBoxes"
+           android:id="@+id/box_credit_card_number"
+           android:hint="Card Number">
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/credit_card_number"
+               android:maxLength="19"
+               android:inputType="number"/>
+
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/credit_card_number"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+           <com.google.android.material.textfield.TextInputLayout
+           style="@style/CreditCardLayoutBoxes"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+           android:id="@+id/box_expiration_date"
+
+               android:hint="MM/YY">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/expiration_date"
+                   android:maxLength="5"
+                   android:digits="01234567890"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginLeft="10dp"
+                   android:inputType="number"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               style="@style/CreditCardLayoutBoxes"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:id="@+id/box_security_code"
+               android:hint="Security Code">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/cvv"
+                   android:maxLength="4"
+                   android:inputType="number"
+                   android:layout_marginRight="10dp" />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           app:layout_constraintTop_toTopOf="@id/credit_card_number"
+           app:layout_constraintStart_toStartOf="parent">
+
+
+           <com.google.android.material.textfield.TextInputLayout
+               style="@style/CreditCardLayoutBoxes"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:id="@+id/box_first_name"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+
+               android:hint="First Name">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/first_name"
+                   style="@style/FirstOrLastNameInput"
+
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               style="@style/CreditCardLayoutBoxes"
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:id="@+id/box_last_name"
+               android:layout_marginRight="10dp"
+               android:hint="Last Name">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/last_name"
+                   style="@style/FirstOrLastNameInput"/>
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+       </LinearLayout>
+
+
+       <com.google.android.material.button.MaterialButton
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/btn_submit_payment"
+           android:text="Submit Payment"
+           android:textColor="@color/white"
+           android:layout_marginRight="10dp"
+           android:layout_marginLeft="10dp" />
+
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
